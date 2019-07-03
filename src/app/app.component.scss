@@ -9,7 +9,7 @@
 
 a.button3{
     display:inline-block;
-    padding:0.3em 1.2em;
+    padding:0.5em 3.4em;
     margin:0 0.3em 0.3em 0;
     border-radius: 15px;
     box-sizing: border-box;
@@ -47,6 +47,7 @@ a.button3:hover{
 .has-search .form-control-feedback {
     position: absolute;
     z-index: 2;
+    margin-top: 9px;
     display: block;
     width: 2.375rem;
     height: 2.375rem;
@@ -69,13 +70,35 @@ a.button3:hover{
     height: 100vh;
 }
 
+#messageBar{
+    margin-left: 34px;
+    padding-top: 32px;
+}
+
+#navBar{
+    display: flex;
+    justify-content: right;
+    margin-top: 10px;
+}
+
+#navRow{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 10px;
+}
+
+#navSearch{
+    display: flex;
+    justify-content: left;
+}
+
 #profileContainer{
     margin-left: 22px;
 }
 
 #profileList{
     list-style: none;
-    margin-top: 15px;
+    margin-top: 24px;
 }
 
 #profileImage{
@@ -103,10 +126,6 @@ a.button3:hover{
     justify-content: space-evenly;
 }
 
-#messageBar{
-    margin-left: 55px;
-    padding-top: 24px;
-}
 
 #rightHalf{
     height: 100vh;

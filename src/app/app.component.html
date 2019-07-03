@@ -60,17 +60,21 @@
       </div>
     </div>
     
-    <div id = "rightHalf" class="col-md-8">
+    <div id = "rightHalf" class="col-md-9">
       
-      <div class="row-4">
-          <div class="col-7 form-group has-search">
-            <span class="fa fa-search form-control-feedback"></span>
-            <input type="text" class="form-control" placeholder="Search">
-          </div>
+      <div class="row-4" id="navRow">
           
-          <div class="col-3">
-              <app-paginator [numberOfPages]="emailPosts"></app-paginator>
-          </div>
+        <div class="col-7 form-group has-search" id="navSearch">
+          
+          <span class="fa fa-search form-control-feedback"></span>
+          <input type="text" class="form-control" placeholder="Search">
+          
+        </div>
+          
+        <div class="col-3" id="navBar">
+          <app-paginator [numberOfPages]="emailPosts"></app-paginator>
+        </div>
+
       </div>
 
       <div id = "emailList" class="row-8">
