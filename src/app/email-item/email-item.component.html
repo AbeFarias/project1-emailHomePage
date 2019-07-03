@@ -1,9 +1,12 @@
 <div class="email">
     <div class="emailBody">
-        <h6 class="emailAuthor">
-                <p id="emailAuthor">{{post.author}}</p>
-                <p id="emailDate">{{post.date}}</p>
-                <div style="clear: both"></div>
+        <h6 class="emailHead">
+                <div class="row-1">
+                {{post.author}}
+                </div>
+                <div class="row-2">
+                    {{post.date}}
+                </div>
         </h6>
         <h5 class="emailTitle">
             <strong>{{post.title}}</strong>

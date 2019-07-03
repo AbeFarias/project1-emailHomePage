@@ -64,11 +64,6 @@ a.button3:hover{
     flex-wrap: wrap;
 }
 
-#emailName{
-    font-size: smaller;
-    list-style: none;
-}
-
 #leftHalf{
     background-color: #dadada;
     height: 100vh;
@@ -83,6 +78,18 @@ a.button3:hover{
     margin-top: 15px;
 }
 
+#profileImage{
+    display: flex;
+    justify-content: left;
+    padding-left: 0px;
+}
+
+#profileName{
+    display: flex;
+    font-size: smaller;
+    justify-content: right;
+}
+
 #profilePic{
     border-radius: 50%;
     width: 90px;
@@ -91,10 +98,21 @@ a.button3:hover{
     margin-top: 10px;
 }
 
+#profileRow{
+    display: flex;
+    justify-content: space-evenly;
+}
+
 #messageBar{
     margin-left: 55px;
+    padding-top: 24px;
 }
 
 #rightHalf{
     height: 100vh;
+}
+#userName{
+    list-style: none;
+    padding-left: 4px;
+    padding-top: 40px;
 }

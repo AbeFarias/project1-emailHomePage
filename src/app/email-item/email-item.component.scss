@@ -1,4 +1,6 @@
-.emailAuthor{
+.emailHead{
+    display: flex;
+    justify-content: space-between;
     opacity: 0.7;
 }
 
@@ -9,4 +11,19 @@
 
 .emailTitle{
     margin-top: -8px;
+}
+
+.row-1{
+    display: flex;
+    justify-content: left;
+}
+
+.row-2{
+    display: flex;
+    justify-content: right;
+}
+
+#emailAuthor{
+    justify-content: left;
+    display: flex;
 }
