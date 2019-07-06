@@ -6,6 +6,7 @@ import { EmailItemComponent } from './email-item/email-item.component';
 import { EmailListComponent } from './email-list/email-list.component';
 import { TruncatePipe } from './truncate.pipe';
 import { PaginatorComponent } from './paginator/paginator.component';
+import { HighlightDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { PaginatorComponent } from './paginator/paginator.component';
     EmailItemComponent,
     EmailListComponent,
     TruncatePipe,
-    PaginatorComponent
+    PaginatorComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule

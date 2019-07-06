@@ -6,8 +6,12 @@
 }
 
 .emailText{
-    font-size: 1vw;
+    font-size: 13px;
     opacity: 0.7;
+}
+
+.emailText:hover{
+    cursor: pointer;
 }
 
 .emailTitle{

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, HostListener } from '@angular/core';
 import { EmailPass } from '../email-pass';
 import { TruncatePipe } from '../truncate.pipe';
 
@@ -8,7 +8,7 @@ import { TruncatePipe } from '../truncate.pipe';
   styleUrls: ['./email-item.component.scss']
 })
 export class EmailItemComponent implements OnInit {
-
+  @HostListener('click', [''])
   @Input() post: EmailPass;
   fullSummary: string;
   constructor(private truncatePipe: TruncatePipe) { }
