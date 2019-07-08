@@ -50,13 +50,12 @@ a.button3:hover{
 .has-search .form-control-feedback {
     position: absolute;
     z-index: 2;
-    margin-top: 9px;
+    margin-top: 10px;
     display: block;
     width: 2.375rem;
     height: 2.375rem;
     line-height: 2.375rem;
     text-align: center;
-    pointer-events: none;
     color: #aaa;
 }
 
