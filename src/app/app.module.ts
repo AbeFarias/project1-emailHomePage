@@ -7,6 +7,9 @@ import { EmailListComponent } from './email-list/email-list.component';
 import { TruncatePipe } from './truncate.pipe';
 import { PaginatorComponent } from './paginator/paginator.component';
 import { HighlightDirective } from './highlight.directive';
+import { LoginFormComponent } from './login-form/login-form.component';
+import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
+import { MessageFormComponent } from './message-form/message-form.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,10 @@ import { HighlightDirective } from './highlight.directive';
     EmailListComponent,
     TruncatePipe,
     PaginatorComponent,
-    HighlightDirective
+    HighlightDirective,
+    LoginFormComponent,
+    SignUpFormComponent,
+    MessageFormComponent
   ],
   imports: [
     BrowserModule
