@@ -1,1 +1,89 @@
-<p>message-form works!</p>
+<!-- <div matRipple class="example-ripple-container mat-elevation-z4">
+    new message
+  <ng-content></ng-content>
+</div> -->
+<div>
+  <button id="msgBtn">new message</button>
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <div class="col-12 col-md-8 form-box">
+            <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+              <div class="row">
+                <div class="form-group col-12 col-md-6">
+                  <label for="subject" aria-placeholder="Subject"></label>
+                  <input
+                    type="text"
+                    id="subject"
+                    class="form-control"
+                    formControlName="subject"
+                  />
+                  <span
+                    *ngIf="
+                      !signupForm.get('subject').valid &&
+                      signupForm.get('subject').touched
+                    "
+                    class="form-text text-muted"
+                    >Please enter a subject!</span
+                  >
+                </div>
+
+                <div class="form-group col-12 col-md-6">
+                  <label for="sendTo" aria-placeholder="Send To..."></label>
+                  <input
+                    type="text"
+                    id="sendTo"
+                    class="form-control"
+                    formControlName="sendTo"
+                  />
+                  <span
+                    *ngIf="
+                      !signupForm.get('sendTo').valid &&
+                      signupForm.get('sendTo').touched
+                    "
+                    class="form-text text-muted"
+                    >Please enter a valid Email!</span
+                  >
+                </div>
+
+                <div class="form-group col-12 col-md-6">
+                  <label for="password">Password</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="password"
+                  />
+                  <span
+                    *ngIf="
+                      !signupForm.get('password').valid &&
+                      signupForm.get('password').touched
+                    "
+                    class="form-text text-muted"
+                    >Please enter a Password!</span
+                  >
+                </div>
+
+                <span
+                  *ngIf="!signupForm.valid && signupForm.touched"
+                  class="form-text text-muted"
+                  >Please enter valid info!</span
+                >
+
+                <button
+                  class="btn btn-primary"
+                  type="submit"
+                  [disabled]="!signupForm.valid"
+                >
+                  Submit
+                </button>
+                <p id="signUp">New here? <a id="signUpLink">Sign Up!</a></p>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -19,7 +19,7 @@
             <li id="userAddress">
               johnappleseed@gmail.com
             </li>
-            <li>
+            <li id="loginButton">
               <app-login-form></app-login-form>
             </li>
           </ul>
@@ -28,7 +28,7 @@
       </div>
       <!--the message bar-->
       <div id = "messageBar" class="row-3">
-        <a class="button3">new message</a>
+        <app-message-form></app-message-form>
       </div>
       <!--contains inboxes-->
       <div id="profileContainer" class="row-6">
@@ -39,28 +39,24 @@
             inbox
           </li>
           
-          <br>
           
           <li id="emailID">
             <i class="fa fa-caret-right"></i>
             drafts
           </li>
           
-          <br>
 
           <li id="emailID">
             <i class="fa fa-caret-right"></i>
             sent
           </li>
           
-          <br>
           
           <li id="emailID">
             <i class="fa fa-flag" aria-hidden="true"></i>
             spam
           </li>
 
-          <br>
           
           <li id="emailID">
             <i class="fa fa-trash" aria-hidden="true"></i>

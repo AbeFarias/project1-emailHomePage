@@ -1,33 +1,5 @@
 @import "colors.scss";
 
-@media all and (max-width:30em){
-    a.button3{
-        display:block;
-        margin:0.2em auto;
-    }
-}
-
-a.button3{
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 
-    0 3px 1px -2px rgba(0,0,0,0.12), 
-    0 1px 5px 0 rgba(0,0,0,0.2);
-    display:inline-block;
-    padding:0.5em 3.4em;
-    margin:0 0.3em 0.3em 0;
-    border-radius: 15px;
-    box-sizing: border-box;
-    font-family:'Raleway',sans-serif;
-    font-weight:300;
-    color:#FFFFFF;
-    background-color: $menuItems;
-    text-align:center;
-    transition: all 0.2s;
-}
-a.button3:hover{
-    box-shadow: 3px 3px 3px 3px #888888;
-    cursor: pointer;
-}
-
 .col{
     flex-wrap: wrap;
 }
@@ -42,6 +14,10 @@ a.button3:hover{
     color: $menuItems;
 }
 
+.fa:hover{
+    cursor: pointer;
+}
+
 .has-search .form-control {
     margin-top: 10px;
     padding-left: 2.375rem;
@@ -51,12 +27,16 @@ a.button3:hover{
     position: absolute;
     z-index: 2;
     margin-top: 10px;
-    display: block;
     width: 2.375rem;
     height: 2.375rem;
     line-height: 2.375rem;
     text-align: center;
     color: #aaa;
+}
+
+#emailID{
+    color: #FFFFFF;
+    margin-bottom: 10%;
 }
 
 #emailID:hover{
@@ -68,8 +48,12 @@ a.button3:hover{
 }
 
 #leftHalf{
-    background-color: #dadada;
+    background-color: $mainMenu;
     height: 100vh;
+}
+
+#loginButton{
+    margin-top: 5%;
 }
 
 #messageBar{
@@ -79,13 +63,16 @@ a.button3:hover{
 
 #navBar{
     display: flex;
-    justify-content: right;
+    justify-content: space-evenly;
     margin-top: 10px;
+    width: auto;
+    height: 2.375rem;
+    line-height: 2.375rem;
 }
 
 #navItems{
     font-size: 30px;
-    padding: 20px;
+    padding: 7px;
     padding-top: 0px;
 }
 
@@ -137,6 +124,7 @@ a.button3:hover{
 
 #rightHalf{
     height: 100vh;
+    background-color: $accent;
 }
 
 #userAddress{
@@ -147,4 +135,5 @@ a.button3:hover{
     list-style: none;
     padding-left: 4px;
     padding-top: 40px;
+    color: #FFFFFF;
 }

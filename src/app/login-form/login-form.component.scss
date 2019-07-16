@@ -1,56 +1,92 @@
-.container{
-    margin-top: 30px;
+.container {
+  margin-top: 30px;
 }
 
-.form-box{
-    padding: 20px;
-    border: 1px solid #CCCCCC;
-    border-radius: 10px;
-    box-shadow: 2px 2px 0px 0px #AAAAAA;
+.form-box {
+  padding: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px 0px #aaaaaa;
+  background-color: #5EB1BF;
 }
 
-input, select{
-    &.ng-invalid{
-        &.ng-touched{
-            border: 1px solid red;
-        }
+input,
+select {
+  &.ng-invalid {
+    &.ng-touched {
+      border: 1px solid #D84727;
     }
+  }
 }
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content/Box */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #042A2B;
+  margin: 12% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50.375rem;
+  height: 21.375rem;
+  line-height: 2.375rem;/* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-primary{
+  background-color: #EF7B45;
+  border-color: #EF7B45;
+  margin-left: 14px;
+}
+
+#myBtn{
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 
+    0 3px 1px -2px rgba(0,0,0,0.12), 
+    0 1px 5px 0 rgba(0,0,0,0.2);
+  border-radius: 40%;
+  border: none;
+  background-color: #EF7B45;
+  color: #fafafa;
+  transition: all 0.2s;
+}
+
+#myBtn:hover{
+  box-shadow: none;
+  color: black;
+}
+
+#signUp{
+  padding-left: 60px;
+}
+
+#signUpLink:hover{
+    text-decoration: underline;
+    color: #EF7B45;
     cursor: pointer;
-  }
+}
