@@ -1,12 +1,8 @@
-<!-- <div matRipple class="example-ripple-container mat-elevation-z4">
-    new message
-  <ng-content></ng-content>
-</div> -->
 <div>
   <button id="msgBtn">new message</button>
-  <div id="myModal" class="modal">
+  <div #myModal id="msgModal" class="modal">
     <div class="modal-content">
-      <span class="close">&times;</span>
+      <span (click)="closeClicker" class="close">&times;</span>
       <div class="container">
         <div class="row justify-content-md-center">
           <div class="col-12 col-md-8 form-box">
@@ -49,19 +45,72 @@
                 </div>
 
                 <div class="form-group col-12 col-md-6">
-                  <label for="password">Password</label>
+                  <label for="CC" aria-placeholder="CC"></label>
                   <input
                     type="text"
+                    id="CC"
                     class="form-control"
-                    formControlName="password"
+                    formControlName="CC"
                   />
                   <span
                     *ngIf="
-                      !signupForm.get('password').valid &&
-                      signupForm.get('password').touched
+                      !signupForm.get('sendTo').valid &&
+                      signupForm.get('sendTo').touched
                     "
                     class="form-text text-muted"
-                    >Please enter a Password!</span
+                    >Please enter a valid Email!</span
+                  >
+                </div>
+
+                <div class="form-group col-12 col-md-6">
+                  <label for="BCC" aria-placeholder="BCC"></label>
+                  <input
+                    type="text"
+                    id="BCC"
+                    class="form-control"
+                    formControlName="BCC"
+                  />
+                  <span
+                    *ngIf="
+                      !signupForm.get('sendTo').valid &&
+                      signupForm.get('sendTo').touched
+                    "
+                    class="form-text text-muted"
+                    >Please enter a valid Email!</span
+                  >
+                </div>
+
+                <div class="form-group col-12 col-md-6">
+                  <label for="emailBody" aria-placeholder="Body..."></label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    formControlName="emailBody"
+                  />
+                  <span
+                    *ngIf="
+                      !signupForm.get('emailBody').valid &&
+                      signupForm.get('emailBody').touched
+                    "
+                    class="form-text text-muted"
+                    >Please enter a message!</span
+                  >
+                </div>
+
+                <div class="form-group col-12 col-md-6">
+                  <label for="hyperLinks" aria-placeholder="Hyper Links"></label>
+                  <input
+                    type="url"
+                    class="form-control"
+                    formControlName="hyperLinks"
+                  />
+                  <span
+                    *ngIf="
+                      !signupForm.get('hyperLinks').valid &&
+                      signupForm.get('hyperLinks').touched
+                    "
+                    class="form-text text-muted"
+                    >Please enter a hyperlink, no clue why, but DO IT!</span
                   >
                 </div>
 
@@ -73,12 +122,11 @@
 
                 <button
                   class="btn btn-primary"
-                  type="submit"
+                  type="button"
                   [disabled]="!signupForm.valid"
                 >
-                  Submit
+                  Send
                 </button>
-                <p id="signUp">New here? <a id="signUpLink">Sign Up!</a></p>
               </div>
             </form>
           </div>

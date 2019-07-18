@@ -3,7 +3,7 @@
 
   <div id="myModal" class="modal">
     <div class="modal-content">
-      <span class="close" (ngClick)="handleClick()">&times;</span>
+      <span class="close">&times;</span>
       <div class="container">
         <div class="row justify-content-md-center">
           <div class="col-12 col-md-8 form-box">
@@ -57,7 +57,15 @@
                 >
                   Submit
                 </button>
-                <p id="signUp">New here? <a id="signUpLink">Sign Up!</a></p>
+                <p id="signUp">
+                  New here?
+                  <a
+                    id="signUpLink"
+                    routerLink="/sign-up-form"
+                    routerLinkActive="active"
+                    >Sign Up!</a
+                  >
+                </p>
               </div>
             </form>
           </div>

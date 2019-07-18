@@ -1,6 +1,6 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
-import { MatRippleModule } from '@angular/material/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: "app-message-form",
@@ -8,19 +8,22 @@ import { MatRippleModule } from '@angular/material/core';
   styleUrls: ["./message-form.component.scss"]
 })
 export class MessageFormComponent implements OnInit {
+  @ViewChild('myModal', {static: false}) modal: ElementRef;
   signupForm: FormGroup;
-
   constructor() {}
 
   ngOnInit() {
     this.signupForm = new FormGroup({
       subject: new FormControl(null, Validators.required),
       sendTo: new FormControl(null, [Validators.required, Validators.email]),
-      password: new FormControl(null, Validators.required)
+      emailBody: new FormControl(null, Validators.required),
+      hyperLinks: new FormControl(null, Validators.required),
+      CC: new FormControl(null),
+      BCC: new FormControl(null),
     });
 
     // Get the modal
-    var modal = document.getElementById("myModal");
+    // var modal = document.getElementById("msgModal");
 
     // Get the button that opens the modal
     var btn = document.getElementById("msgBtn");
@@ -29,14 +32,14 @@ export class MessageFormComponent implements OnInit {
     var span = document.getElementsByClassName("close")[0];
 
     // When the user clicks on the button, open the modal
-    btn.onclick = function() {
-      modal.style.display = "block";
+    btn.onclick = () => {
+      this.modal.nativeElement.style.display = "block";
     };
 
     // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
+    window.onclick = () => {
+      if (event.target == this.modal.nativeElement) {
+        this.modal.nativeElement.style.display = "none";
       }
     };
 
@@ -48,11 +51,10 @@ export class MessageFormComponent implements OnInit {
     //   $("#" + id).fadeOut('slow');
     // };
   }
-
-  // handleClick(): void {
-  //   var modal = document.getElementById("myModal");
-  //   this.modal.style.display = "none";
-  // }
+    
+  closeClicker(): void {
+    this.modal.nativeElement.style.display = "none";
+  }
 
   onSubmit() {
     console.log(this.signupForm);

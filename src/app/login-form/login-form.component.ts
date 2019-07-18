@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: "app-login-form",
@@ -36,20 +37,7 @@ export class LoginFormComponent implements OnInit {
         modal.style.display = "none";
       }
     };
-
-    // modal.showModal(id) {
-    //   $("#" + id).fadeIn('slow');
-    // };
-    
-    // modal.hideModal(id) {
-    //   $("#" + id).fadeOut('slow');
-    // };
   }
-  
-  // handleClick(): void {
-  //   var modal = document.getElementById("myModal");
-  //   this.modal.style.display = "none";
-  // }
   
   onSubmit() {
     console.log(this.signupForm);
