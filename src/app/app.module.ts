@@ -6,28 +6,28 @@ import { EmailItemComponent } from './email-item/email-item.component';
 import { EmailListComponent } from './email-list/email-list.component';
 import { TruncatePipe } from './truncate.pipe';
 import { HighlightDirective } from './highlight.directive';
-import { LoginFormComponent } from './login-form/login-form.component';
-import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
-import { MessageFormComponent } from './message-form/message-form.component';
-import { AppRoutingModule } from './app-routing.module';
+import { EmailService } from './services/email.service';
+import { RestService } from './services/rest.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppRoutingModule,
     EmailItemComponent,
     EmailListComponent,
     TruncatePipe,
     HighlightDirective,
-    LoginFormComponent,
-    SignUpFormComponent,
-    MessageFormComponent
   ],
   imports: [
     BrowserModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [TruncatePipe],
+  providers: [
+    TruncatePipe,
+    EmailService,
+    RestService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

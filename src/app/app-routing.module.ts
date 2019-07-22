@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { AppComponent } from "./app.component";
+import { HomePageComponent } from "./home-page/home-page.component";
 import { LoginFormComponent } from "./login-form/login-form.component";
 import { MessageFormComponent } from "./message-form/message-form.component";
 import { SignUpFormComponent } from "./sign-up-form/sign-up-form.component";
@@ -8,7 +8,7 @@ import { SignUpFormComponent } from "./sign-up-form/sign-up-form.component";
 const routes: Routes = [
   {
     path: "",
-    component: AppComponent
+    component: HomePageComponent
   },
 
   { 
@@ -17,7 +17,8 @@ const routes: Routes = [
   },
 
   { path: "message-form", 
-    component: MessageFormComponent 
+    component: MessageFormComponent,
+    // canActivate: [AuthGuardService]
   },
 
   { path: "sign-up-form",
@@ -28,6 +29,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  declarations: []
+  declarations: [],
+  providers: [],
 })
 export class AppRoutingModule {}
