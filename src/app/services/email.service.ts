@@ -8,7 +8,7 @@ import { AuthService } from './auth.service';
 })
 
 export class EmailService {
-    constructor(private readonly rest: RestService) {}
+    constructor(private readonly rest: RestService, private readonly auth: AuthService) {}
     getEmails(userId: number){
         return this.rest.get(environment.apiURL + '/emails/?userID=' + this.auth.getUserId());
 

@@ -4,6 +4,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { RestService } from '../services/rest.service';
 import { environment } from 'src/environments/environment';
 import { identifierModuleUrl } from '@angular/compiler';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: "app-login-form",
@@ -13,7 +14,7 @@ import { identifierModuleUrl } from '@angular/compiler';
 
 export class LoginFormComponent implements OnInit {
   public loginForm: FormGroup;
-  constructor() {}
+  constructor(private readonly rest: RestService, private readonly auth: AuthService) {}
 
   ngOnInit() {
     this.loginForm = new FormGroup({
@@ -44,14 +45,14 @@ export class LoginFormComponent implements OnInit {
 
   }
   
-  handleLoginClick() {
-    const form = this.loginForm.value;
-    this.rest.get(environment.apiURL + `/users?email=${form.email}&password=${form.password}`)
-      .then(res => {
-        const userId = res[0].id;
-        this.auth.setUserId(userId);
-      });
-  };
+  // handleLoginClick() {
+  //   const form = this.loginForm.value;
+  //   this.rest.get(environment.apiURL + `/users?email=${form.email}&password=${form.password}`)
+  //     .then(res => {
+  //       const userId = res[0].id;
+  //       this.auth.setUserId(userId);
+  //     });
+  // };
   
   onSubmit() {
     console.log(this.loginForm);

@@ -1,78 +1,72 @@
-<div>
-  <button id="myBtn">Login</button>
+<p>I am working</p>
 
-  <div id="myModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <div class="container">
-        <div class="row justify-content-md-center">
-          <div class="col-12 col-md-8 form-box">
-            <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-              <div class="row">
-                <div class="form-group col-12 col-md-6">
-                  <label for="email">Email</label>
-                  <input
-                    type="text"
-                    id="email"
-                    class="form-control"
-                    formControlName="email"
-                  />
-                  <span
-                    *ngIf="
-                      !loginForm.get('email').valid &&
-                      loginForm.get('email').touched
-                    "
-                    class="form-text text-muted"
-                    >Please enter a valid Email!</span
-                  >
-                </div>
-
-                <div class="form-group col-12 col-md-6">
-                  <label for="password">Password</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    formControlName="password"
-                  />
-                  <span
-                    *ngIf="
-                      !loginForm.get('password').valid &&
-                      loginForm.get('password').touched
-                    "
-                    class="form-text text-muted"
-                    >Please enter a Password!</span
-                  >
-                </div>
-
-                <span
-                  *ngIf="!loginForm.valid && loginForm.touched"
-                  class="form-text text-muted"
-                  >Please enter valid info!</span
-                >
-
-                <button
-                  (click)="handleLoginClick()"
-                  class="btn btn-primary"
-                  type="submit"
-                  [disabled]="!loginForm.valid"
-                >
-                  Submit
-                </button>
-
-                <p id="signUp">
-                  New here?
-                  <a
-                    id="signUpLink"
-                    routerLink="/sign-up-form"
-                    routerLinkActive="active"
-                    >Sign Up!</a
-                  >
-                </p>
-              </div>
-            </form>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <div class="col-12 col-md-8 form-box">
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="row">
+          <div class="form-group col-12 col-md-6">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              id="email"
+              class="form-control"
+              formControlName="email"
+            />
+            <span
+              *ngIf="
+                !loginForm.get('email').valid && loginForm.get('email').touched
+              "
+              class="form-text text-muted"
+              >Please enter a valid Email!</span
+            >
           </div>
+
+          <div class="form-group col-12 col-md-6">
+            <label for="password">Password</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="password"
+            />
+            <span
+              *ngIf="
+                !loginForm.get('password').valid &&
+                loginForm.get('password').touched
+              "
+              class="form-text text-muted"
+              >Please enter a Password!</span
+            >
+          </div>
+
+          <span
+            *ngIf="!loginForm.valid && loginForm.touched"
+            class="form-text text-muted"
+            >Please enter valid info!</span
+          >
+
+          <button
+            (click)="handleLoginClick()"
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="!loginForm.valid"
+            routerLink="/home-page"
+            routerLinkActive="active"
+          >
+            Submit
+          </button>
+
+          <p id="signUp">
+            New here?
+            <a
+              id="signUpLink"
+              routerLink="/sign-up-form"
+              routerLinkActive="active"
+              >Sign Up!</a
+            >
+          </p>
         </div>
-      </div>
+      </form>
     </div>
   </div>
 </div>
