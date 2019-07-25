@@ -1,3 +1,4 @@
+@import '../colors.scss';
 // .container {
 //   margin-top: 30px;
 // }
@@ -12,11 +13,12 @@
 }
 
 .form-box {
-  padding: 20px;
+  padding: 40px;
   border: 1px solid #cccccc;
   border-radius: 10px;
   box-shadow: 2px 2px 0px 0px #aaaaaa;
-  background-color: #5eb1bf;
+  background-color: $mainMenu;
+  margin: 14vw;
 }
 
 input,
@@ -29,17 +31,91 @@ select {
 }
 
 .btn-primary {
-  background-color: #ef7b45;
-  border-color: #ef7b45;
+  background-color: $menuItems;
+  border-color: $menuItems;
   margin-left: 14px;
 }
 
 #signUp {
   padding-left: 60px;
+  color: white;
 }
 
 #signUpLink:hover {
   text-decoration: underline;
-  color: #ef7b45;
+  color: $menuItems;
   cursor: pointer;
+}
+
+// 
+form {
+  width: 320px;
+  // float: left;
+  margin: 20px;
+  > div {
+    position: relative;
+    overflow: hidden;
+  }
+  input, textarea {
+    width: 100%;
+    border: 2px solid gray; 
+    background: none;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    padding: 8px 12px;
+    outline: 0;
+    &:valid {
+      // Hides the label
+      background: white; 
+    }
+    &:focus {
+      border-color: #f06d06;
+    }
+    &:focus + label {
+      background: #f06d06;
+      color: white;
+      font-size: 70%;
+      padding: 1px 6px;
+      z-index: 2;
+      text-transform: uppercase;
+    }
+  }
+  label {
+    transition: // not padding
+      background 0.2s,
+      color 0.2s,
+      top 0.2s,
+      bottom 0.2s,
+      right 0.2s,
+      left 0.2s;
+    position: absolute;
+    color: white;
+    padding: 7px 6px;
+  }
+  textarea {
+    display: block;
+    resize: vertical;
+  }
+}
+
+form.go-bottom {
+  input, textarea {
+    padding: 12px 12px 12px 12px; 
+  }
+  label {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-left: 3vw;
+  }
+  input:focus, textarea:focus {
+    padding: 4px 6px 20px 6px; 
+  }
+  input:focus + label, textarea:focus + label {
+    top: 100%;
+    margin-top: -16px;
+  }
 }

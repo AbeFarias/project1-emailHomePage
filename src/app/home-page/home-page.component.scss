@@ -7,6 +7,47 @@
   }
 }
 
+.pulse {
+  margin: 100px;
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  cursor: pointer;
+  box-shadow: 0 0 0 #FFFFFF;
+  animation: pulse 2s infinite;
+}
+.pulse:hover {
+  animation: none;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 #FFFFFF;
+  }
+  70% {
+    -webkit-box-shadow: 0 0 0 10px rgba(238, 238, 238, 0.329);
+  }
+  100% {
+    -webkit-box-shadow: 0 0 0 0 rgba(238, 238, 238, 0.329);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 #FFFFFF;
+    box-shadow: 0 0 0 0 #FFFFFF;
+  }
+  70% {
+    -moz-box-shadow: 0 0 0 10px rgba(238, 238, 238, 0.329);
+    box-shadow: 0 0 0 10px rgba(238, 238, 238, 0.329);
+  }
+  100% {
+    -moz-box-shadow: 0 0 0 0 rgba(238, 238, 238, 0.329);
+    box-shadow: 0 0 0 0 rgba(238, 238, 238, 0.329);
+  }
+}
+
 #newMsgButton {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14),
     0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
@@ -115,6 +156,11 @@
 #navSearch {
   display: flex;
   justify-content: left;
+}
+
+#profileButton {
+  background-color: $mainMenu;
+  border-color: $mainMenu;
 }
 
 #profileContainer {
