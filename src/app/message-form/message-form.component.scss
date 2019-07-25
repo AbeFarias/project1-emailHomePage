@@ -1,4 +1,4 @@
-@import "colors.scss";
+@import "../colors.scss";
 
 @media all and (max-width: 30em) {
   #msgBtn {
@@ -37,7 +37,7 @@
   border: 1px solid #cccccc;
   border-radius: 10px;
   box-shadow: 2px 2px 0px 0px #aaaaaa;
-  background-color: #5eb1bf;
+  background-color: $secondaryMenu;
 }
 
 input,
@@ -65,7 +65,7 @@ select {
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: #042a2b;
+  background-color: $mainMenu;
   margin: 12% auto; /* 15% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
@@ -90,7 +90,7 @@ select {
 }
 
 .btn-primary {
-  background-color: #ef7b45;
+  background-color: $menuItems;
   border-color: #ef7b45;
   margin-left: 14px;
 }

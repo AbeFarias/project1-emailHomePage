@@ -1,1 +1,108 @@
-<p>sign-up-form works!</p>
+<div class="container vertical-center">
+  <div class="row justify-content-md-center">
+    <div class="col-12 col-md-8 form-box">
+      <form [formGroup]="signUpForm">
+        <div class="row">
+          <div class="form-group col-12 col-md-6">
+            <label for="firstName">First Name</label>
+            <input
+              type="text"
+              id="firstName"
+              class="form-control"
+              formControlName="firstName"
+            />
+            <span
+              *ngIf="
+                !signUpForm.get('firstName').valid &&
+                signUpForm.get('firstName').touched
+              "
+              class="form-text text-muted"
+              >Please enter a First Name!</span
+            >
+          </div>
+
+          <div class="form-group col-12 col-md-6">
+            <label for="lastName">Last Name</label>
+            <input
+              type="text"
+              id="lastName"
+              class="form-control"
+              formControlName="lastName"
+            />
+            <span
+              *ngIf="
+                !signUpForm.get('firstName').valid &&
+                signUpForm.get('firstName').touched
+              "
+              class="form-text text-muted"
+              >Please enter a Last Name!</span
+            >
+          </div>
+        </div>
+
+        <div class="form-group row-12 row-md-6">
+          <label for="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            class="form-control"
+            formControlName="email"
+          />
+          <span
+            *ngIf="
+              !signUpForm.get('email').valid && signUpForm.get('email').touched
+            "
+            class="form-text text-muted"
+            >Please enter a valid Email!</span
+          >
+        </div>
+
+        <div class="row">
+          <div class="form-group col-12 col-md-6" id="passwordCol">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              formControlName="password"
+            />
+            <span
+              *ngIf="
+              !signUpForm.get('password').valid &&
+              signUpForm.get('password').touched
+            "
+              class="form-text text-muted"
+              >Please enter a Password!</span
+            >
+          </div>
+
+          <div class="form-group col-12 col-md-6">
+            <label for="matcher">Confirm Password</label>
+            <input
+              type="password"
+              class="form-control"
+              formControlName="matcher"
+            />
+            <span
+              *ngIf="
+              !signUpForm.get('matcher').valid &&
+              signUpForm.get('matcher').touched
+            "
+              class="form-text text-muted"
+              >Passwords do not match!</span
+            >
+          </div>
+        </div>
+
+        <button
+          class="btn btn-primary"
+          type="submit"
+          [disabled]="!signUpForm.valid"
+          routerLink="/"
+          routerLinkActive="active"
+        >
+          Create
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

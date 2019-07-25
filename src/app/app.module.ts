@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { EmailItemComponent } from './email-item/email-item.component';
 import { EmailListComponent } from './email-list/email-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TruncatePipe } from './truncate.pipe';
 import { HighlightDirective } from './highlight.directive';
 import { EmailService } from './services/email.service';
@@ -25,6 +26,7 @@ import { MessageFormModule } from './message-form/message-form.module';
   ],
   imports: [
     AppRoutingModule,
+    BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,

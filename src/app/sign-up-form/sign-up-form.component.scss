@@ -1,0 +1,35 @@
+.vertical-center {
+  min-height: 100%; /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.form-box {
+  padding: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 10px;
+  box-shadow: 2px 2px 0px 0px #aaaaaa;
+  background-color: #5eb1bf;
+}
+
+input,
+select {
+  &.ng-invalid {
+    &.ng-touched {
+      border: 1px solid #d84727;
+    }
+  }
+}
+
+.btn-primary {
+  background-color: #ef7b45;
+  border-color: #ef7b45;
+  margin-left: 14px;
+}
+
+#passwordCol {
+  margin-top: auto;
+}

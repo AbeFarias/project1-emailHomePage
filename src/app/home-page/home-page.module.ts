@@ -1,15 +1,14 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
-import { HomePageComponent } from './home-page.component';
-import { CommonModule } from '@angular/common';
+import { NgModule } from "@angular/core";
+import { Routes, RouterModule } from "@angular/router";
+import { HomePageComponent } from "./home-page.component";
+import { CommonModule } from "@angular/common";
 
 const routes: Routes = [
   {
-    path: '',
+    path: "",
     component: HomePageComponent
   }
-]
+];
 
 @NgModule({
   declarations: [HomePageComponent],

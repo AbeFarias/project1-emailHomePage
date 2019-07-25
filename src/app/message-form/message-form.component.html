@@ -9,12 +9,13 @@
             <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
               <div class="row">
                 <div class="form-group col-12 col-md-6">
-                  <label for="subject" aria-placeholder="Subject"></label>
+                  <label for="subject"></label>
                   <input
                     type="text"
                     id="subject"
                     class="form-control"
                     formControlName="subject"
+                    placeholder="Subject"
                   />
                   <span
                     *ngIf="
@@ -27,12 +28,13 @@
                 </div>
 
                 <div class="form-group col-12 col-md-6">
-                  <label for="sendTo" aria-placeholder="Send To..."></label>
+                  <label for="sendTo"></label>
                   <input
                     type="text"
                     id="sendTo"
                     class="form-control"
                     formControlName="sendTo"
+                    placeholder="Send To..."
                   />
                   <span
                     *ngIf="
@@ -45,12 +47,13 @@
                 </div>
 
                 <div class="form-group col-12 col-md-6">
-                  <label for="CC" aria-placeholder="CC"></label>
+                  <label for="CC"></label>
                   <input
                     type="text"
                     id="CC"
                     class="form-control"
                     formControlName="CC"
+                    placeholder="CC"
                   />
                   <span
                     *ngIf="
@@ -63,12 +66,13 @@
                 </div>
 
                 <div class="form-group col-12 col-md-6">
-                  <label for="BCC" aria-placeholder="BCC"></label>
+                  <label for="BCC"></label>
                   <input
                     type="text"
                     id="BCC"
                     class="form-control"
                     formControlName="BCC"
+                    placeholder="BCC"
                   />
                   <span
                     *ngIf="
@@ -81,11 +85,12 @@
                 </div>
 
                 <div class="form-group col-12 col-md-6">
-                  <label for="emailBody" aria-placeholder="Body..."></label>
+                  <label for="emailBody"></label>
                   <input
                     type="text"
                     class="form-control"
                     formControlName="emailBody"
+                    placeholder="Body"
                   />
                   <span
                     *ngIf="
@@ -98,11 +103,12 @@
                 </div>
 
                 <div class="form-group col-12 col-md-6">
-                  <label for="hyperLinks" aria-placeholder="Hyper Links"></label>
+                  <label for="hyperLinks"></label>
                   <input
                     type="url"
                     class="form-control"
                     formControlName="hyperLinks"
+                    placeholder="HyperLinks"
                   />
                   <span
                     *ngIf="
@@ -124,6 +130,8 @@
                   class="btn btn-primary"
                   type="button"
                   [disabled]="!signupForm.valid"
+                  routerLink="/home-page"
+                  routerLinkActive="active"
                 >
                   Send
                 </button>

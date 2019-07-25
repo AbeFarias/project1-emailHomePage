@@ -18,8 +18,8 @@ export class MessageFormComponent implements OnInit {
       sendTo: new FormControl(null, [Validators.required, Validators.email]),
       emailBody: new FormControl(null, Validators.required),
       hyperLinks: new FormControl(null, Validators.required),
-      CC: new FormControl(null),
-      BCC: new FormControl(null),
+      CC: new FormControl(null, Validators.email),
+      BCC: new FormControl(null, Validators.email),
     });
 
     // Get the modal

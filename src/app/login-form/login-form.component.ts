@@ -1,9 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
-import { ActivatedRoute, Router } from '@angular/router';
 import { RestService } from '../services/rest.service';
-import { environment } from 'src/environments/environment';
-import { identifierModuleUrl } from '@angular/compiler';
 import { AuthService } from '../services/auth.service';
 
 @Component({
