@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { LoginFormComponent } from './login-form/login-form.component';
 import { SignUpFormComponent } from './sign-up-form/sign-up-form.component';
 import { MessageFormComponent } from './message-form/message-form.component';
+import { AuthGuardService } from './services/auth-guard.service';
 
 const routes: Routes = [
   {
@@ -27,11 +28,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), 
-    // LoginFormComponent, SignUpFormComponent, MessageFormComponent
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
   declarations: [],
   providers: [],
 })
 export class AppRoutingModule {}
+// LoginFormComponent, SignUpFormComponent, MessageFormComponent

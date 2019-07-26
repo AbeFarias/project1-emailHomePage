@@ -2,10 +2,10 @@
   <button id="msgBtn">new message</button>
   <div #myModal id="msgModal" class="modal">
     <div class="modal-content">
-      <span (click)="closeClicker" class="close">&times;</span>
+      <!-- <span (click)="closeClicker" class="close">&times;</span> -->
       <div class="container">
         <div class="row justify-content-md-center">
-          <div class="col-12 col-md-8 form-box">
+          <div class="form-box">
             <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
               <div class="row">
                 <div class="form-group col-12 col-md-6">
@@ -86,12 +86,13 @@
 
                 <div class="form-group col-12 col-md-6">
                   <label for="emailBody"></label>
-                  <input
+                  <textarea type="text" formControlName="emailBody" class="form-control" rows="5" id="comment" placeholder="Body"></textarea>
+                  <!-- <input
                     type="text"
                     class="form-control"
                     formControlName="emailBody"
                     placeholder="Body"
-                  />
+                  /> -->
                   <span
                     *ngIf="
                       !signupForm.get('emailBody').valid &&

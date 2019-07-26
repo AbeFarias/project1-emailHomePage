@@ -2,8 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
-import { EmailItemComponent } from './email-item/email-item.component';
-import { EmailListComponent } from './email-list/email-list.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TruncatePipe } from './truncate.pipe';
 import { HighlightDirective } from './highlight.directive';
@@ -13,14 +11,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { HomePageModule } from './home-page/home-page.module';
 import { MessageFormModule } from './message-form/message-form.module';
+import { LoginFormModule } from './login-form/login-form.module';
+// import { HomePageComponent } from './home-page/home-page.component';
 
 // import { LoginFormComponent } from './login-form/login-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    EmailItemComponent,
-    EmailListComponent,
     TruncatePipe,
     HighlightDirective,
   ],
@@ -33,6 +31,7 @@ import { MessageFormModule } from './message-form/message-form.module';
     HttpClientModule,
     HomePageModule,
     MessageFormModule,
+    LoginFormModule,
   ],
   providers: [
     TruncatePipe,
